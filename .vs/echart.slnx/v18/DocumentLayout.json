@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\risto\\source\\repos\\echart\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1AAF3A1D-2E84-2289-7B42-68646F3336B2}|echart.esproj|c:\\users\\risto\\source\\repos\\echart\\echart\\src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{1AAF3A1D-2E84-2289-7B42-68646F3336B2}|echart.esproj|solutionrelative:echart\\src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AAF3A1D-2E84-2289-7B42-68646F3336B2}|echart.esproj|c:\\users\\risto\\source\\repos\\echart\\echart\\src\\components\\aminochart\\aminochart.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{1AAF3A1D-2E84-2289-7B42-68646F3336B2}|echart.esproj|solutionrelative:echart\\src\\components\\aminochart\\aminochart.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "aminochart.tsx",
+              "DocumentMoniker": "C:\\Users\\risto\\source\\repos\\echart\\echart\\src\\components\\aminochart\\aminochart.tsx",
+              "RelativeDocumentMoniker": "echart\\src\\components\\aminochart\\aminochart.tsx",
+              "ToolTip": "C:\\Users\\risto\\source\\repos\\echart\\echart\\src\\components\\aminochart\\aminochart.tsx",
+              "RelativeToolTip": "echart\\src\\components\\aminochart\\aminochart.tsx",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAIwBQAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-10-08T00:29:45.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "App.tsx",
+              "DocumentMoniker": "C:\\Users\\risto\\source\\repos\\echart\\echart\\src\\App.tsx",
+              "RelativeDocumentMoniker": "echart\\src\\App.tsx",
+              "ToolTip": "C:\\Users\\risto\\source\\repos\\echart\\echart\\src\\App.tsx",
+              "RelativeToolTip": "echart\\src\\App.tsx",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-10-08T00:15:37.34Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
