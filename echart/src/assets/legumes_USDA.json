@@ -1,6 +1,85 @@
 {
   "unit": "grams per 100 grams (g/100g) of food",
   "legumes": [
+        {
+      "fdc_id": 0,
+      "description": "Daily need, mg/kg body weight",
+      "protein_content": 55,
+      "amino_acids": [
+        {
+          "value": 4,
+          "name": "Tryptophan"
+        },
+        {
+          "value": 15,
+          "name": "Threonine"
+        },
+        {
+          "value": 20,
+          "name": "Isoleucine"
+        },
+        {
+          "value": 39,
+          "name": "Leucine"
+        },
+        {
+          "value": 30,
+          "name": "Lysine"
+        },
+        {
+          "value": 5,
+          "name": "Methionine"
+        },
+        {
+          "value": 10,
+          "name": "Cystine"
+        },
+        {
+          "value": 20,
+          "name": "Phenylalanine"
+        },
+        {
+          "value": 20,
+          "name": "Tyrosine"
+        },
+        {
+          "value": 26,
+          "name": "Valine"
+        },
+        {
+          "value": 5,
+          "name": "Arginine"
+        },
+        {
+          "value": 10,
+          "name": "Histidine"
+        },
+        {
+          "value": 0,
+          "name": "Alanine"
+        },
+        {
+          "value": 0,
+          "name": "Aspartic acid"
+        },
+        {
+          "value": 0,
+          "name": "Glutamic acid"
+        },
+        {
+          "value": 0,
+          "name": "Glycine"
+        },
+        {
+          "value": 0,
+          "name": "Proline"
+        },
+        {
+          "value": 0,
+          "name": "Serine"
+        }
+      ]
+    },
     {
       "fdc_id": 16302,
       "description": "Beans, adzuki, mature seeds, cooked, boiled, with salt",
@@ -130,7 +209,7 @@
           "name": "Arginine"
         },
         {
-          "value": 0.297,
+          "value": 0.972,
           "name": "Histidine"
         },
         {
@@ -453,6 +532,137 @@
           "value": 0.38,
           "name": "Alanine"
         },
-        {
-          "value": 1.081,
-          "name
+           {"name": "Aspartic acid", "amount": 1.081},
+        {"name": "Glutamic acid", "amount": 1.545},
+        {"name": "Glycine", "amount": 0.360},
+        {"name": "Proline", "amount": 0.354},
+        {"name": "Serine", "amount": 0.447}
+      ]
+    },
+    {
+      "fdc_id": 16019,
+      "description": "Beans, pinto, mature seeds, cooked, boiled, with salt",
+      "protein_content": 9.04,
+      "amino_acids": [
+        {"name": "Tryptophan", "amount": 0.124},
+        {"name": "Threonine", "amount": 0.405},
+        {"name": "Isoleucine", "amount": 0.485},
+        {"name": "Leucine", "amount": 0.816},
+        {"name": "Lysine", "amount": 0.722},
+        {"name": "Methionine", "amount": 0.134},
+        {"name": "Cystine", "amount": 0.129},
+        {"name": "Phenylalanine", "amount": 0.569},
+        {"name": "Tyrosine", "amount": 0.320},
+        {"name": "Valine", "amount": 0.548},
+        {"name": "Arginine", "amount": 0.730},
+        {"name": "Histidine", "amount": 0.301},
+        {"name": "Alanine", "amount": 0.463},
+        {"name": "Aspartic acid", "amount": 1.196},
+        {"name": "Glutamic acid", "amount": 1.696},
+        {"name": "Glycine", "amount": 0.434},
+        {"name": "Proline", "amount": 0.399},
+        {"name": "Serine", "amount": 0.510}
+      ]
+    },
+    {
+      "fdc_id": 16023,
+      "description": "Beans, small white, mature seeds, cooked, boiled, with salt",
+      "protein_content": 8.86,
+      "amino_acids": [
+        {"name": "Tryptophan", "amount": 0.119},
+        {"name": "Threonine", "amount": 0.393},
+        {"name": "Isoleucine", "amount": 0.457},
+        {"name": "Leucine", "amount": 0.811},
+        {"name": "Lysine", "amount": 0.697},
+        {"name": "Methionine", "amount": 0.124},
+        {"name": "Cystine", "amount": 0.124},
+        {"name": "Phenylalanine", "amount": 0.536},
+        {"name": "Tyrosine", "amount": 0.282},
+        {"name": "Valine", "amount": 0.528},
+        {"name": "Arginine", "amount": 0.669},
+        {"name": "Histidine", "amount": 0.285},
+        {"name": "Alanine", "amount": 0.449},
+        {"name": "Aspartic acid", "amount": 1.189},
+        {"name": "Glutamic acid", "amount": 1.670},
+        {"name": "Glycine", "amount": 0.418},
+        {"name": "Proline", "amount": 0.393},
+        {"name": "Serine", "amount": 0.505}
+      ]
+    },
+    {
+      "fdc_id": 16043,
+      "description": "Lentils, mature seeds, cooked, boiled, with salt",
+      "protein_content": 9.02,
+      "amino_acids": [
+        {"name": "Tryptophan", "amount": 0.083},
+        {"name": "Threonine", "amount": 0.380},
+        {"name": "Isoleucine", "amount": 0.432},
+        {"name": "Leucine", "amount": 0.701},
+        {"name": "Lysine", "amount": 0.668},
+        {"name": "Methionine", "amount": 0.100},
+        {"name": "Cystine", "amount": 0.098},
+        {"name": "Phenylalanine", "amount": 0.485},
+        {"name": "Tyrosine", "amount": 0.334},
+        {"name": "Valine", "amount": 0.489},
+        {"name": "Arginine", "amount": 0.718},
+        {"name": "Histidine", "amount": 0.252},
+        {"name": "Alanine", "amount": 0.407},
+        {"name": "Aspartic acid", "amount": 1.111},
+        {"name": "Glutamic acid", "amount": 1.644},
+        {"name": "Glycine", "amount": 0.397},
+        {"name": "Proline", "amount": 0.380},
+        {"name": "Serine", "amount": 0.463}
+      ]
+    },
+    {
+      "fdc_id": 16049,
+      "description": "Peas, split, mature seeds, cooked, boiled, with salt",
+      "protein_content": 8.27,
+      "amino_acids": [
+        {"name": "Tryptophan", "amount": 0.100},
+        {"name": "Threonine", "amount": 0.347},
+        {"name": "Isoleucine", "amount": 0.390},
+        {"name": "Leucine", "amount": 0.702},
+        {"name": "Lysine", "amount": 0.613},
+        {"name": "Methionine", "amount": 0.088},
+        {"name": "Cystine", "amount": 0.100},
+        {"name": "Phenylalanine", "amount": 0.457},
+        {"name": "Tyrosine", "amount": 0.316},
+        {"name": "Valine", "amount": 0.461},
+        {"name": "Arginine", "amount": 0.677},
+        {"name": "Histidine", "amount": 0.231},
+        {"name": "Alanine", "amount": 0.360},
+        {"name": "Aspartic acid", "amount": 1.171},
+        {"name": "Glutamic acid", "amount": 1.583},
+        {"name": "Glycine", "amount": 0.360},
+        {"name": "Proline", "amount": 0.331},
+        {"name": "Serine", "amount": 0.490}
+      ]
+    },
+    {
+      "fdc_id": 16057,
+      "description": "Chickpeas (garbanzo beans), mature seeds, cooked, boiled, with salt",
+      "protein_content": 8.86,
+      "amino_acids": [
+        {"name": "Tryptophan", "amount": 0.098},
+        {"name": "Threonine", "amount": 0.362},
+        {"name": "Isoleucine", "amount": 0.413},
+        {"name": "Leucine", "amount": 0.640},
+        {"name": "Lysine", "amount": 0.615},
+        {"name": "Methionine", "amount": 0.109},
+        {"name": "Cystine", "amount": 0.100},
+        {"name": "Phenylalanine", "amount": 0.459},
+        {"name": "Tyrosine", "amount": 0.282},
+        {"name": "Valine", "amount": 0.459},
+        {"name": "Arginine", "amount": 0.638},
+        {"name": "Histidine", "amount": 0.245},
+        {"name": "Alanine", "amount": 0.400},
+        {"name": "Aspartic acid", "amount": 1.130},
+        {"name": "Glutamic acid", "amount": 1.579},
+        {"name": "Glycine", "amount": 0.407},
+        {"name": "Proline", "amount": 0.354},
+        {"name": "Serine", "amount": 0.422}
+      ]
+    }
+  ]
+} 
