@@ -1,7 +1,7 @@
 import  { type FC } from 'react';
 import ReactECharts from 'echarts-for-react';
 import './BeanChart.css';
-import { Badge } from '@chakra-ui/react';
+//import { Badge } from '@chakra-ui/react';
 
 interface BeanChartProps {
     valine_percentage: number;
@@ -23,17 +23,16 @@ function FormatPrc(prc: number): string
  function FormatPrcString(caption:string, prc: number): string
  {
     //let prc_string = Object.keys(prc ?? 0)[0].charAt(0).toUpperCase() + (prc ?? 0).toFixed(1) + '%';
-    return caption + ' ' + (prc ?? 0).toFixed(1) + '%';
+    return (caption ?? '') + ' ' + (prc ?? 0).toFixed(1) + '%';
  }
 
 const BeanChart: FC<BeanChartProps> = (props) => {  
-    //let valine = (((props.valine_percentage ?? 0) > 100 ? 0 : (props.valine_percentage ?? 0)) / 10).toFixed(1);
-    let valine_prc = 'Valine ' + (props.valine_percentage ?? 0) + '%';
+   
     
     return (
         <>
 
-            <div>BeanChart {valine_prc}</div>
+            <div>BeanChart</div>
             
             <ReactECharts 
                 style={{ height: '100%', width: '100%' }} 
@@ -77,11 +76,11 @@ const BeanChart: FC<BeanChartProps> = (props) => {
             }}
             />
 
-            <div>
-              <Badge variant="solid" colorPalette="green">Histidine percentage: {props.histidine_percentage.toFixed(0)}</Badge>
-              Valine percentage: {props.valine_percentage.toFixed(0)} 
-              <Badge variant="outline">Histidine</Badge> {props.histidine_percentage.toFixed(0)}
-            </div>
+            {/* <div>
+              <Badge variant="solid" colorPalette="green">Histidine: {FormatPrc(props.histidine_percentage)}</Badge>
+              
+              <Badge variant="solid" colorPalette="blue">Valine: {FormatPrc(props.valine_percentage)}</Badge> 
+            </div> */}
         </>
     )
 };
