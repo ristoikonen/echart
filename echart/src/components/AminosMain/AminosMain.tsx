@@ -1,24 +1,7 @@
 import { type FC, useState } from 'react';
 //import ReactECharts from 'echarts-for-react';
 import { RadioCard, HStack  } from "@chakra-ui/react"
-//import React, { useState } from 'react'
-// import Bchart from '../bchart/bchart';
-// Update the import path below to the correct location of your Bchart component:
-// import Bchart from '../Bchart/Bchart'; // Adjust the path and filename case as needed
-// import Bchart from '../bchart/bchart'; // Adjust the path and filename case as needed
-import Bchart from './bchart/bchart'; // Try this if your file is named 'Bchart.tsx'
-
-// Try the following import if your file is named 'bchart.tsx' and is in the same folder as this file:
-
-// Or, if the file is in a folder named 'bchart' with an index.tsx:
-// import Bchart from '../bchart';
-
-
-
-//import {
-//    SwitchField, Input, Label, Card, Flex, Text, Heading, Image,
-//    useTheme
-//} from '@aws-amplify/ui-react';
+import BeanChart from '../BeanChart/BeanChart';
 
 
 //let USDADataArray: USDAData[] = [];
@@ -29,18 +12,18 @@ const items = [
   { value: "chick", title: "Chickpeas", description: "Large beans" },
 ]
 
-let histidine = '';
+//let histidine = '';
 
-interface AminoachartProps {
+interface AminosMainProps {
     valine_percentage: number;
     histidine_percentage: number;
-/*     isoleucine: number;
+     isoleucine: number;
     leucine: number;
     lysine: number;
     methionine: number;
     phenylalanine: number;
     threonine: number;
-    tryptophan: number;  */
+    tryptophan: number;  
 }
 
 
@@ -99,16 +82,7 @@ const aminoacids: aminoacidvalues = {
 
 
 
-function FormatPrc(prc: number): string
- {
-    return (((prc ?? 0) > 100 ? 0 : (prc ?? 0)) / 10).toFixed(1);
- }
 
- function FormatPrcString(caption:string, prc: number): string
- {
-    //let prc_string = Object.keys(prc ?? 0)[0].charAt(0).toUpperCase() + (prc ?? 0).toFixed(1) + '%';
-    return caption + ' ' + (prc ?? 0).toFixed(1) + '%';
- }
 
 function ReadJSON(chosenBean:string |null)
 {
@@ -156,7 +130,8 @@ function setUSDA(data: USDAData[] | null, chosenBean:string |null )
                 console.log("Found Histidine at index: " + indexByName);
                 console.log(indexByName); // Outputs: 0interface aminoacidvalues {
                 aminoacids.Histidine = data[i].amino_acids[indexByName].value;
-                histidine= aminoacids.Histidine.toString();
+                //setHistidineValue(data[i].amino_acids[indexByName].value);
+                //aminoacids.Histidine= aminoacids.Histidine.toString();
                 
                  console.log(aminoacids.Histidine); // Outputs: 0 
             }
@@ -174,15 +149,25 @@ function setUSDA(data: USDAData[] | null, chosenBean:string |null )
     console.log(data);
 }
 
-const Aminoachart: FC<AminoachartProps> = (props) => {
+const AminosMain: FC<AminosMainProps> = (props) => {
     const [value, setValue] = useState<string | null>(null);
-    const [histidine_value, setHistidineValue] = useState(props.histidine_percentage ?? 0); //useState<number | 0>(0)
-    //setHistidineValue(props.histidine_percentage ?? 0); // ?? aminoacids.Histidine);
+    //const [selectedOption, setSelectedOption] = useState("");
     ReadJSON(value);
-    let valine = FormatPrc(props.valine_percentage);
-    let valine_prc = FormatPrcString('Valine', props.valine_percentage);
-    histidine = FormatPrc(histidine_value); //props.histidine_percentage);
-    let histidine_prc = FormatPrcString('Histidine', histidine_value); //props.histidine_percentage);
+    // Remove OptionChangeEvent interface, use ValueChangeDetails from RadioCard
+
+/*     const handleOptionChange = (details: { value: string }): void => {
+      setSelectedOption(details.value);
+      console.log('Selected option:', details.value);
+      ReadJSON(details.value);
+    }; */
+
+    //const [histidine_value, setHistidineValue] = useState(props.histidine_percentage ?? 0); //useState<number | 0>(0)
+    //setHistidineValue(props.histidine_percentage ?? 0); // ?? aminoacids.Histidine);
+    //ReadJSON(value);
+    //let valine = FormatPrc(props.valine_percentage);
+    //let valine_prc = FormatPrcString('Valine', props.valine_percentage);
+    //let histidine = FormatPrc(props.histidine_percentage);
+    //let histidine_prc = FormatPrcString('Histidine', histidine); //props.histidine_percentage);
 
     //     const handleValueChange = (details: { value: string }) => {
     //        setValue(details.value);
@@ -190,7 +175,7 @@ const Aminoachart: FC<AminoachartProps> = (props) => {
 
     return (
         <>
-            <h1>Amino acid spectrum</h1>
+            <h1>Amino acid spectrums</h1>
 
             <div>
 
@@ -215,57 +200,26 @@ const Aminoachart: FC<AminoachartProps> = (props) => {
                 </RadioCard.Root>
 
             </div>
-            <div>{valine_prc}</div>
+
             <div>{aminoacids.Histidine}</div>
             
-            <Bchart valine_percentage={props.valine_percentage} histidine_percentage={histidine_value} />
+            <BeanChart 
+              histidine_percentage={props.histidine_percentage} 
+              valine_percentage={props.valine_percentage} 
+              tryptophan_percentage={props.tryptophan}
+              threonine_percentage={props.threonine} 
+              phenylalanine_percentage={props.phenylalanine} 
+              methionine_percentage={props.methionine} 
+              lysine_percentage={props.lysine} 
+              leucine_percentage={props.leucine} 
+              isoleucine_percentage={props.isoleucine} 
+            />
 
-{/*             <ReactECharts 
-                style={{ height: '100%', width: '100%' }} 
 
-                option={{
-                    legend: {
-                        top: 'bottom'
-                    },
-                    toolbox: { 
-                        show: true,
-                        feature: {
-                        mark: { show: true },
-                        dataView: { show: true, readOnly: false },
-                        restore: { show: true },
-                        saveAsImage: { show: true }
-                        }
-                    },
-                    series: [
-                        {
-                            name: 'Nightingale Chart',
-                            type: 'pie',
-                            radius: [50, 250],
-                            center: ['50%', '50%'],
-                            roseType: 'area',
-                            itemStyle: {
-                                borderRadius: 8
-                            },
-                            data: [
-                                { value: aminoacids.Histidine , name: histidine_prc },
-                                { value: 8, name: 'isoleucine' },
-                                { value: 2, name: 'leucine' },
-                                { value: 6, name: 'lysine' },
-                                { value: 8, name: 'methionine' },
-                                { value: 6, name: 'phenylalanine' },
-                                { value: 2, name: 'phenylalanine' },
-                                { value: 8, name: 'threonine' },
-                                { value: 6, name: 'tryptophan' },
-                                { value: valine, name: valine_prc }
-                            ]
-                        }
-                    ]                
-            }}
-            /> */}
 
-            <div>Valine percentage: {props.valine_percentage.toFixed(0)} </div>
         </>
     )
 };
 
-export default Aminoachart;
+
+export default AminosMain;
