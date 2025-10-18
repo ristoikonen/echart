@@ -1,6 +1,7 @@
 import { type FC, useState } from 'react';
 //import ReactECharts from 'echarts-for-react';
 import { RadioCard, HStack  } from "@chakra-ui/react"
+// ,  Wrap, Badge
 import BeanChart from '../BeanChart/BeanChart';
 
 
@@ -33,6 +34,45 @@ interface AminosMainProps {
 //  valine_percentage={12.3} histidine_percentage={23.4} tryptophan={54.0} threonine={45.6} 
 //  phenylalanine={34.5} methionine={22.1} lysine={18.9} leucine={29.4} isoleucine={15.2} 
 
+/*
+type AA = Record<"Histidine" | "Isoleucine" | "Leucine" | "Lysine" | "Methionine" | "Phenylalanine" | "Threonine" | "Tryptophan" | "Valine" | "Alanine" , number> 
+let Aminos: AA = {  
+  "Histidine": 0,
+  "Isoleucine": 0,
+  "Leucine": 0,
+  "Lysine": 0, 
+  "Methionine": 0,
+  "Phenylalanine": 0,
+  "Threonine": 0,
+  "Tryptophan": 0,
+  "Valine": 0,
+  "Alanine": 0
+};
+
+function setAminoPercentage(aa: AA, aa_mg_in_bean: AA, aa_daily: AA, persons_weight_kg: number) {
+  aa.Histidine = precentageByWeight(aa_mg_in_bean.Histidine, persons_weight_kg, aa_daily.Histidine);  
+  aa.Alanine = precentageByWeight(aa_mg_in_bean.Alanine, persons_weight_kg, aa_daily.Alanine);
+  aa.Isoleucine = precentageByWeight(aa_mg_in_bean.Isoleucine, persons_weight_kg, aa_daily.Isoleucine);
+  aa.Leucine = precentageByWeight(aa_mg_in_bean.Leucine, persons_weight_kg, aa_daily.Leucine);
+  aa.Lysine = precentageByWeight(aa_mg_in_bean.Lysine, persons_weight_kg, aa_daily.Lysine);
+  aa.Methionine = precentageByWeight(aa_mg_in_bean.Methionine, persons_weight_kg, aa_daily.Methionine);
+  aa.Phenylalanine = precentageByWeight(aa_mg_in_bean.Phenylalanine, persons_weight_kg, aa_daily.Phenylalanine);
+  aa.Threonine = precentageByWeight(aa_mg_in_bean.Threonine, persons_weight_kg, aa_daily.Threonine);
+  aa.Tryptophan = precentageByWeight(aa_mg_in_bean.Tryptophan, persons_weight_kg, aa_daily.Tryptophan);
+  aa.Valine = precentageByWeight(aa_mg_in_bean.Valine, persons_weight_kg, aa_daily.Valine);
+}
+
+const Demo = (aa: AA) => {
+  return (
+    <Wrap>
+      {Object.keys(aa).map((key) => (
+        <Badge key={key}>{key}: {aa[key as keyof AA]}</Badge>
+      ))}
+    </Wrap>
+  )
+}
+
+*/
 
 interface USDARoot {
     unit : string;
@@ -85,6 +125,7 @@ const aminoacids: aminoacidvalues = {
     Proline: 0,
     Serine: 0
 };
+
 // mg per kg of body weight
 const aminoacids_daily: aminoacidvalues = {
     Histidine: 10,
